@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+    - 'run'
+    - 'deploy'
+    - 'horoscope-api-cloudrun'
+    - '--source=.'
+    - '--region=asia-northeast1'
+    - '--allow-unauthenticated'
+    - '--set-env-vars=LINE_CHANNEL_SECRET=ff1af2d7ee5c5b571584423e33948c0f,LINE_CHANNEL_ACCESS_TOKEN=900dAaI0O63X3LgLy2iDmM8+ICKKYCjgtqlQG/QVTM85S8FHMtFGnSc+UNUQBJLvrGTL/U8fP1SA5K6H9yfHUz25T9jf0ARGqn5A+Mae/Fo3wnGjc5Yr2181Eilawp9e66Ii5AVxzy0bnnrI2Y6JLAdB04t89/1O/w1cDnyilFU=,GOOGLE_GEOCODING_API_KEY=AIzaSyAruvendlhg3DY-GJYl_jaWNUxkEspm0_M,GOOGLE_API_KEY=AIzaSyCyW-mRXF2L8LRfK3HKG34uo9wNf5IddcE'
+  id: Deploy
+images:
+- gcr.io/$PROJECT_ID/horoscope-api-cloudrun
