@@ -7,7 +7,8 @@ steps:
     - '--source=.'
     - '--region=asia-northeast1'
     - '--allow-unauthenticated'
-    - '--set-env-vars=LINE_CHANNEL_SECRET=ff1af2d7ee5c5b571584423e33948c0f,LINE_CHANNEL_ACCESS_TOKEN=900dAaI0O63X3LgLy2iDmM8+ICKKYCjgtqlQG/QVTM85S8FHMtFGnSc+UNUQBJLvrGTL/U8fP1SA5K6H9yfHUz25T9jf0ARGqn5A+Mae/Fo3wnGjc5Yr2181Eilawp9e66Ii5AVxzy0bnnrI2Y6JLAdB04t89/1O/w1cDnyilFU=,GOOGLE_GEOCODING_API_KEY=AIzaSyAruvendlhg3DY-GJYl_jaWNUxkEspm0_M,GOOGLE_API_KEY=AIzaSyANkrDLX2wSdva0m153up5O-h0VLOWq30o'
   id: Deploy
 images:
 - gcr.io/$PROJECT_ID/horoscope-api-cloudrun
+options:
+  logging: CLOUD_LOGGING_ONLY # この行が追加されました
